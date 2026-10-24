@@ -3,96 +3,75 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#101827">
-  <title>Workspace | Kevid Systems</title>
-  <link rel="stylesheet" href="styles.css">
-  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-  <script src="config.js"></script>
-  <script defer src="app.js"></script>
+  <title>Kevin Ruto | Civil Engineering Student & Digital Innovator</title>
+  <meta name="description" content="Meet Kevin Ruto, a Kenyan civil engineering student exploring practical engineering, digital technology, AI, and problem-solving projects.">
+  <meta name="robots" content="index,follow">
+  <!-- TODO: Replace the example URL below with your final public homepage URL. -->
+  <link rel="canonical" href="https://YOUR-USERNAME.github.io/YOUR-REPOSITORY/">
+  <meta name="theme-color" content="#102a43">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Kevin Ruto | Civil Engineering Student & Digital Innovator">
+  <meta property="og:description" content="Engineering, technology, and practical problem-solving from a Kenyan student.">
+  <meta property="og:url" content="https://YOUR-USERNAME.github.io/YOUR-REPOSITORY/">
+  <meta property="og:image" content="https://YOUR-USERNAME.github.io/YOUR-REPOSITORY/assets/images/headshot.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Kevin Kipkemoi Ruto",
+    "description": "Kenyan civil engineering student interested in engineering, digital technology, AI, and practical problem-solving.",
+    "alumniOf": {"@type":"CollegeOrUniversity","name":"Kirinyaga University"},
+    "knowsAbout": ["Civil engineering", "Digital technology", "Artificial intelligence", "Research", "Problem solving"],
+    "url": "https://YOUR-USERNAME.github.io/YOUR-REPOSITORY/"
+  }
+  </script>
+  <script src="assets/js/main.js" defer></script>
 </head>
-<body class="app-page">
-  <div id="app-loading" class="loading-screen"><span class="spinner"></span><p>Loading your workspace…</p></div>
-  <div id="app" class="app-layout hidden">
-    <aside class="sidebar" id="sidebar">
-      <a class="brand" href="index.html"><span class="brand-mark">K</span><span>kevid<span class="brand-light">systems</span></span></a>
-      <div class="workspace-label">WORKSPACE</div>
-      <nav class="side-nav" aria-label="Main navigation">
-        <button class="nav-item active" data-view="overview"><span>▦</span> Overview</button>
-        <button class="nav-item" data-view="contacts"><span>♙</span> Contacts</button>
-        <button class="nav-item" data-view="conversations"><span>☷</span> Conversations</button>
-        <button class="nav-item" data-view="automations"><span>↯</span> Automations</button>
-        <button class="nav-item" data-view="settings"><span>⚙</span> Settings</button>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html" aria-label="Kevin Ruto home"><span class="brand-mark">KR</span><span>Kevin Ruto</span></a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Open navigation"><span></span><span></span><span></span></button>
+      <nav id="site-nav" class="site-nav" aria-label="Main navigation">
+        <a class="active" href="index.html">Home</a><a href="about.html">About</a><a href="projects.html">Projects</a><a href="engineering.html">Engineering</a><a class="nav-cta" href="contact.html">Contact</a>
       </nav>
-      <div class="sidebar-bottom">
-        <div class="status-dot"></div><span>Workspace connected</span>
-      </div>
-    </aside>
-    <div class="main-column">
-      <header class="topbar">
-        <button id="mobile-menu" class="icon-button mobile-only" aria-label="Open navigation">☰</button>
-        <div><div class="topbar-kicker">KEVID SYSTEMS</div><div class="topbar-title" id="page-title">Overview</div></div>
-        <div class="account-area">
-          <div class="avatar" id="user-avatar">K</div>
-          <div class="account-copy"><strong id="user-email">Account</strong><span>Workspace member</span></div>
-          <button id="logout-button" class="button button-outline button-small" type="button">Sign out</button>
-        </div>
-      </header>
-      <main class="content">
-        <div id="global-notice" class="notice hidden" role="status" aria-live="polite"></div>
-        <section class="view" id="view-overview">
-          <div class="page-intro"><div><div class="eyebrow">YOUR WORKSPACE</div><h1>Good to have you back.</h1><p class="muted">Manage customer details, conversations and automation rules in one place.</p></div></div>
-          <div class="stats-grid">
-            <article class="stat-card"><span class="stat-label">Total contacts</span><strong id="stat-contacts">—</strong><span class="stat-note">Saved in your workspace</span></article>
-            <article class="stat-card"><span class="stat-label">Conversations</span><strong id="stat-conversations">—</strong><span class="stat-note">Customer conversation records</span></article>
-            <article class="stat-card"><span class="stat-label">Automation rules</span><strong id="stat-rules">—</strong><span class="stat-note">Rules saved to your account</span></article>
-          </div>
-          <div class="section-card">
-            <div class="section-heading"><div><h2>Quick actions</h2><p class="muted">Start with the essentials.</p></div></div>
-            <div class="quick-actions">
-              <button class="quick-action" data-go="contacts"><span class="quick-icon">＋</span><span><strong>Add a contact</strong><small>Save a customer record</small></span><span class="arrow">→</span></button>
-              <button class="quick-action" data-go="conversations"><span class="quick-icon">☷</span><span><strong>View conversations</strong><small>Review saved conversations</small></span><span class="arrow">→</span></button>
-              <button class="quick-action" data-go="automations"><span class="quick-icon">↯</span><span><strong>Set up an automation</strong><small>Create a rule for your workflow</small></span><span class="arrow">→</span></button>
-            </div>
-          </div>
-          <div class="callout"><div><strong>Connect your customer channels</strong><p>WhatsApp and website-chat delivery require their provider credentials and backend integration. This workspace stores records; it does not pretend to send messages before a channel is configured.</p></div></div>
-        </section>
-        <section class="view hidden" id="view-contacts">
-          <div class="page-intro"><div><div class="eyebrow">CUSTOMER DIRECTORY</div><h1>Contacts</h1><p class="muted">Create and manage your customer records.</p></div><button id="add-contact-button" class="button button-primary">＋ Add contact</button></div>
-          <div id="contact-form-card" class="section-card hidden">
-            <div class="section-heading"><div><h2>New contact</h2><p class="muted">Fields marked required must be completed.</p></div></div>
-            <form id="contact-form" class="form-grid">
-              <div><label for="contact-name">Full name *</label><input id="contact-name" required maxlength="120" placeholder="Customer name"></div>
-              <div><label for="contact-email">Email</label><input id="contact-email" type="email" maxlength="254" placeholder="customer@example.com"></div>
-              <div><label for="contact-phone">Phone</label><input id="contact-phone" type="tel" maxlength="40" placeholder="+254…"></div>
-              <div class="form-actions"><button class="button button-primary" type="submit">Save contact</button><button id="cancel-contact" class="button button-outline" type="button">Cancel</button></div>
-            </form>
-          </div>
-          <div class="section-card"><div class="table-tools"><input id="contact-search" class="search-input" type="search" placeholder="Search contacts…" aria-label="Search contacts"></div><div class="table-wrap"><table><thead><tr><th>Name</th><th>Email</th><th>Phone</th><th>Added</th><th></th></tr></thead><tbody id="contacts-table"></tbody></table></div><div id="contacts-empty" class="empty-state hidden">No contacts yet. Select “Add contact” to create your first record.</div></div>
-        </section>
-        <section class="view hidden" id="view-conversations">
-          <div class="page-intro"><div><div class="eyebrow">CUSTOMER MESSAGES</div><h1>Conversations</h1><p class="muted">Review conversation records saved to your workspace.</p></div></div>
-          <div class="section-card"><div class="table-wrap"><table><thead><tr><th>Subject</th><th>Channel</th><th>Status</th><th>Last updated</th></tr></thead><tbody id="conversations-table"></tbody></table></div><div id="conversations-empty" class="empty-state hidden">No conversations have been recorded yet.</div></div>
-        </section>
-        <section class="view hidden" id="view-automations">
-          <div class="page-intro"><div><div class="eyebrow">WORKFLOW MANAGEMENT</div><h1>Automations</h1><p class="muted">Save rules for workflows you intend to connect.</p></div><button id="add-rule-button" class="button button-primary">＋ New rule</button></div>
-          <div id="rule-form-card" class="section-card hidden"><div class="section-heading"><div><h2>Create automation rule</h2><p class="muted">Rules are saved as configuration; execution requires a connected backend/channel.</p></div></div>
-            <form id="rule-form" class="form-grid">
-              <div><label for="rule-name">Rule name *</label><input id="rule-name" required maxlength="120" placeholder="e.g. Welcome new enquiries"></div>
-              <div><label for="rule-trigger">Trigger *</label><select id="rule-trigger" required><option value="new_contact">New contact</option><option value="incoming_message">Incoming message</option><option value="keyword_match">Keyword match</option></select></div>
-              <div class="full-width"><label for="rule-action">Action description *</label><textarea id="rule-action" required maxlength="1000" rows="3" placeholder="Describe what this rule should do"></textarea></div>
-              <div class="form-actions"><button class="button button-primary" type="submit">Save rule</button><button id="cancel-rule" class="button button-outline" type="button">Cancel</button></div>
-            </form>
-          </div>
-          <div id="rules-list" class="rules-list"></div><div id="rules-empty" class="empty-state section-card hidden">No automation rules yet. Create a rule to save your workflow configuration.</div>
-        </section>
-        <section class="view hidden" id="view-settings">
-          <div class="page-intro"><div><div class="eyebrow">ACCOUNT</div><h1>Settings</h1><p class="muted">Your sign-in and workspace details.</p></div></div>
-          <div class="section-card settings-card"><h2>Signed-in account</h2><p id="settings-email" class="settings-value"></p><p class="muted">Account security and email confirmation settings are managed by Supabase Auth.</p><button id="settings-logout" class="button button-outline" type="button">Sign out</button></div>
-          <div class="section-card"><h2>Connected services</h2><p class="muted">This build connects to Supabase for authentication and workspace data. WhatsApp Business Platform, email delivery, and live website chat need separate provider setup before messages can be sent or received.</p></div>
-        </section>
-      </main>
-      <footer class="app-footer">© <span id="year"></span> Kevid Systems <span>·</span> Customer messaging workspace</footer>
     </div>
-  </div>
+  </header>
+  <main id="main">
+    <section class="hero container">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="status-dot"></span> Based in Kenya · Open to learning and collaboration</p>
+        <h1>Curious by nature.<br><span class="gradient-text">Building for the real world.</span></h1>
+        <p class="hero-lead">I'm Kevin Ruto, a civil engineering student at Kirinyaga University interested in practical engineering, digital technology, and ideas that solve real problems.</p>
+        <div class="hero-actions"><a class="button button-primary" href="projects.html">Explore my projects <span aria-hidden="true">↗</span></a><a class="button button-secondary" href="about.html">Get to know me</a></div>
+        <div class="hero-note"><span class="note-line"></span><span>Learning continuously. Turning ideas into practical work.</span></div>
+      </div>
+      <div class="hero-visual">
+        <div class="visual-orbit orbit-one"></div><div class="visual-orbit orbit-two"></div>
+        <div class="portrait-frame">
+          <img src="assets/images/headshot-placeholder.svg" alt="Placeholder illustration for Kevin Ruto's profile photograph" width="420" height="500">
+          <div class="portrait-caption"><span class="caption-label">CURRENT FOCUS</span><strong>Engineering × Technology</strong></div>
+        </div>
+        <div class="floating-card card-top"><span class="floating-icon">⌁</span><span><small>Mindset</small><strong>Learn by building</strong></span></div>
+        <div class="floating-card card-bottom"><span class="floating-icon">↗</span><span><small>Based in</small><strong>Kenya</strong></span></div>
+      </div>
+    </section>
+    <section class="trust-strip"><div class="container trust-inner"><span>INTERESTS</span><p>Civil Engineering</p><i></i><p>Digital Innovation</p><i></i><p>Research & Problem-Solving</p></div></section>
+    <section class="section container">
+      <div class="section-heading"><div><p class="eyebrow">A little about my direction</p><h2>Learning with purpose.</h2></div><p class="section-intro">I’m developing a foundation in engineering while exploring how digital tools can make learning, communication, and everyday work more effective.</p></div>
+      <div class="feature-grid">
+        <article class="feature-card"><div class="feature-number">01</div><div class="feature-icon">⌂</div><h3>Engineering mindset</h3><p>Understanding materials, systems, infrastructure, and how technical decisions affect people and places.</p><a href="engineering.html" class="text-link">Explore engineering <span>→</span></a></article>
+        <article class="feature-card"><div class="feature-number">02</div><div class="feature-icon">✳</div><h3>Digital exploration</h3><p>Learning to use websites, software, and AI tools to create useful digital experiences and solve practical problems.</p><a href="projects.html" class="text-link">See project work <span>→</span></a></article>
+        <article class="feature-card"><div class="feature-number">03</div><div class="feature-icon">◎</div><h3>Growth through practice</h3><p>Building skills through research, experimentation, feedback, and projects that make learning visible.</p><a href="about.html" class="text-link">Read my story <span>→</span></a></article>
+      </div>
+    </section>
+    <section class="dark-section"><div class="container dark-inner"><div><p class="eyebrow eyebrow-light">The work in progress</p><h2>Progress is built,<br>one project at a time.</h2><p class="dark-copy">This portfolio will grow as I complete coursework, learn new tools, and work on projects. I value honest progress, clear thinking, and practical results.</p></div><a class="button button-light" href="projects.html">View project space <span>↗</span></a><div class="dark-decoration" aria-hidden="true">KR</div></div></section>
+    <section class="section container closing-cta"><p class="eyebrow">Have an idea or opportunity?</p><h2>Let's connect and learn<br><span class="gradient-text">something useful.</span></h2><a class="button button-primary" href="contact.html">Get in touch <span>↗</span></a></section>
+  </main>
+  <footer class="site-footer"><div class="container footer-inner"><a class="brand brand-footer" href="index.html"><span class="brand-mark">KR</span><span>Kevin Ruto</span></a><p>Built with curiosity in Kenya.</p><div class="footer-links"><a href="about.html">About</a><a href="projects.html">Projects</a><a href="contact.html">Contact</a></div><small>© <span data-year></span> Kevin Ruto. All rights reserved.</small></div></footer>
 </body>
 </html>
